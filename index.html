@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BPM 7-Great</title>
+  <title>CC Zootopia</title>
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/9805/9805578.png" type="image/x-icon">
 
   <style>
@@ -17,7 +17,7 @@
     body {
       width: 100%;
       height: 100%;
-      background: #19313A;
+      background: #FFF8F3; /* Warna dasar terang ceria */
       font-family: 'Segoe UI', sans-serif;
       overflow: hidden;
     }
@@ -42,13 +42,13 @@
       width: 100%;
       height: 100%;
       border: none;
-      background: #19313A;
+      background: #FFF8F3;
     }
 
 
     /* ========================================
        LOADING SCREEN
-       DARK EDUCATIONAL GLASSMORPHISM
+       LIGHT PLAYFUL DESIGN (Zootopia Theme)
        ======================================== */
 
     .loading {
@@ -61,27 +61,23 @@
       align-items: center;
       justify-content: center;
 
+      /* Gradien cerah oranye dan krem */
       background:
         radial-gradient(
-          circle at 8% 20%,
-          rgba(49, 86, 106, 0.42),
-          transparent 30%
+          circle at 10% 20%,
+          rgba(255, 107, 53, 0.15),
+          transparent 40%
         ),
         radial-gradient(
-          circle at 92% 72%,
-          rgba(181, 154, 85, 0.30),
-          transparent 27%
-        ),
-        radial-gradient(
-          circle at 55% 0%,
-          rgba(36, 71, 90, 0.35),
-          transparent 34%
+          circle at 90% 80%,
+          rgba(139, 92, 246, 0.15),
+          transparent 40%
         ),
         linear-gradient(
           135deg,
-          #19313A 0%,
-          #18343E 48%,
-          #203E47 100%
+          #FFF8F3 0%,
+          #FFEEE7 50%,
+          #FBF4FF 100%
         );
 
       z-index: 10;
@@ -99,41 +95,38 @@
 
 
     /* ========================================
-       BACKGROUND LIGHT
+       BACKGROUND LIGHT / BUBBLES
        ======================================== */
 
     .background-glow {
       position: absolute;
       border-radius: 50%;
       pointer-events: none;
-      filter: blur(5px);
+      filter: blur(40px);
     }
 
     .glow-left {
-      width: 260px;
-      height: 260px;
-      left: -130px;
+      width: 300px;
+      height: 300px;
+      left: -100px;
       top: 5%;
-
-      background: rgba(49, 86, 106, 0.22);
+      background: rgba(76, 175, 80, 0.15); /* Hijau lembut */
     }
 
     .glow-right {
-      width: 330px;
-      height: 330px;
-      right: -150px;
+      width: 350px;
+      height: 350px;
+      right: -120px;
       bottom: -100px;
-
-      background: rgba(181, 154, 85, 0.18);
+      background: rgba(255, 87, 34, 0.15); /* Oranye lembut */
     }
 
     .glow-top {
-      width: 180px;
-      height: 180px;
+      width: 200px;
+      height: 200px;
       right: 20%;
-      top: -100px;
-
-      background: rgba(59, 91, 105, 0.15);
+      top: -80px;
+      background: rgba(139, 92, 246, 0.15); /* Ungu lembut */
     }
 
 
@@ -144,8 +137,8 @@
     .floating-icon {
       position: absolute;
 
-      width: 43px;
-      height: 43px;
+      width: 45px;
+      height: 45px;
 
       display: flex;
       align-items: center;
@@ -153,22 +146,18 @@
 
       border-radius: 14px;
 
-      background: rgba(255, 255, 255, 0.07);
+      background: #FFFFFF;
 
-      border: 1px solid rgba(255, 255, 255, 0.13);
+      border: none;
 
       box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.18),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        0 10px 25px rgba(0, 0, 0, 0.08);
 
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-
-      font-size: 19px;
+      font-size: 22px;
 
       animation: floating 4s ease-in-out infinite;
 
-      opacity: 0.8;
+      opacity: 1;
     }
 
     .floating-one {
@@ -203,14 +192,14 @@
       }
 
       50% {
-        transform: translateY(-9px) rotate(3deg);
+        transform: translateY(-12px) rotate(5deg);
       }
 
     }
 
 
     /* ========================================
-       MAIN CARD
+       MAIN CARD (Glassmorphism -> Clean White Card)
        ======================================== */
 
     .loading-content {
@@ -219,7 +208,7 @@
 
       width: min(90%, 460px);
 
-      padding: 38px 30px 34px;
+      padding: 40px 30px 34px;
 
       display: flex;
       flex-direction: column;
@@ -227,18 +216,15 @@
 
       text-align: center;
 
-      background: rgba(255, 255, 255, 0.075);
+      background: #FFFFFF;
 
-      border: 1px solid rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 1);
 
       border-radius: 32px;
 
       box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.28),
-        inset 0 1px 0 rgba(255, 255, 255, 0.10);
-
-      backdrop-filter: blur(22px);
-      -webkit-backdrop-filter: blur(22px);
+        0 25px 60px rgba(255, 107, 53, 0.15),
+        0 10px 20px rgba(0, 0, 0, 0.05);
 
       animation: cardAppear 0.8s ease-out;
     }
@@ -247,7 +233,7 @@
 
       from {
         opacity: 0;
-        transform: translateY(18px) scale(0.97);
+        transform: translateY(20px) scale(0.95);
       }
 
       to {
@@ -259,7 +245,7 @@
 
 
     /* ========================================
-       KNOWLEDGE ORBIT
+       KNOWLEDGE ORBIT (Warna Cerah)
        ======================================== */
 
     .knowledge-loader {
@@ -268,7 +254,7 @@
       width: 170px;
       height: 170px;
 
-      margin-bottom: 23px;
+      margin-bottom: 25px;
 
       display: flex;
       align-items: center;
@@ -281,7 +267,7 @@
       width: 150px;
       height: 150px;
 
-      border: 1.5px solid rgba(181, 154, 85, 0.28);
+      border: 2px solid rgba(255, 87, 34, 0.3); /* Oranye */
 
       border-radius: 50%;
 
@@ -293,21 +279,21 @@
 
       position: absolute;
 
-      width: 9px;
-      height: 9px;
+      width: 12px;
+      height: 12px;
 
-      top: -5px;
+      top: -6px;
       left: 50%;
 
       transform: translateX(-50%);
 
       border-radius: 50%;
 
-      background: #C6A85D;
+      background: #FF5722; /* Oranye Fox */
 
       box-shadow:
-        0 0 0 5px rgba(198, 168, 93, 0.10),
-        0 0 18px rgba(198, 168, 93, 0.50);
+        0 0 0 4px rgba(255, 87, 34, 0.15),
+        0 0 12px rgba(255, 87, 34, 0.6);
     }
 
 
@@ -317,7 +303,7 @@
       width: 112px;
       height: 112px;
 
-      border: 1.5px solid rgba(130, 170, 185, 0.30);
+      border: 2px solid rgba(139, 92, 246, 0.3); /* Ungu */
 
       border-radius: 50%;
 
@@ -329,21 +315,21 @@
 
       position: absolute;
 
-      width: 8px;
-      height: 8px;
+      width: 10px;
+      height: 10px;
 
-      right: -4px;
+      right: -5px;
       top: 50%;
 
       transform: translateY(-50%);
 
       border-radius: 50%;
 
-      background: #8FB4C3;
+      background: #8B5CF6; /* Ungu */
 
       box-shadow:
-        0 0 0 5px rgba(143, 180, 195, 0.10),
-        0 0 18px rgba(143, 180, 195, 0.40);
+        0 0 0 4px rgba(139, 92, 246, 0.15),
+        0 0 12px rgba(139, 92, 246, 0.6);
     }
 
     @keyframes rotateOrbit {
@@ -372,15 +358,15 @@
 
 
     /* ========================================
-       CENTRAL GLOBE
+       CENTRAL GLOBE (Tema Cerah)
        ======================================== */
 
     .globe {
 
       position: relative;
 
-      width: 65px;
-      height: 65px;
+      width: 70px;
+      height: 70px;
 
       display: flex;
       align-items: center;
@@ -388,20 +374,20 @@
 
       border-radius: 50%;
 
+      /* Gradasi hangat oranye */
       background:
         linear-gradient(
           145deg,
-          #527D8B,
-          #315C6B 48%,
-          #24475A
+          #FFB74D,
+          #FF9800 48%,
+          #FF5722
         );
 
-      border: 1px solid rgba(255, 255, 255, 0.16);
+      border: 2px solid #FFFFFF;
 
       box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.28),
-        inset 5px 5px 12px rgba(255, 255, 255, 0.12),
-        inset -5px -5px 12px rgba(0, 0, 0, 0.18);
+        0 10px 20px rgba(255, 87, 34, 0.35),
+        inset 2px 2px 8px rgba(255, 255, 255, 0.4);
 
       animation: globePulse 3s ease-in-out infinite;
     }
@@ -411,10 +397,10 @@
 
       position: absolute;
 
-      width: 45px;
-      height: 45px;
+      width: 48px;
+      height: 48px;
 
-      border: 1.5px solid rgba(255, 255, 255, 0.52);
+      border: 1.5px solid rgba(255, 255, 255, 0.7);
 
       border-radius: 50%;
     }
@@ -424,11 +410,11 @@
 
       position: absolute;
 
-      width: 52px;
-      height: 20px;
+      width: 56px;
+      height: 22px;
 
-      border-top: 1.5px solid rgba(255, 255, 255, 0.48);
-      border-bottom: 1.5px solid rgba(255, 255, 255, 0.48);
+      border-top: 1.5px solid rgba(255, 255, 255, 0.6);
+      border-bottom: 1.5px solid rgba(255, 255, 255, 0.6);
 
       border-radius: 50%;
     }
@@ -437,9 +423,9 @@
       position: relative;
       z-index: 2;
 
-      color: rgba(255, 255, 255, 0.90);
+      color: #FFFFFF;
 
-      font-size: 27px;
+      font-size: 30px;
 
       font-weight: 600;
     }
@@ -452,21 +438,21 @@
       }
 
       50% {
-        transform: scale(1.05);
+        transform: scale(1.08);
       }
 
     }
 
 
     /* ========================================
-       KNOWLEDGE ICONS
+       KNOWLEDGE ICONS (Kartu Putih Kecil)
        ======================================== */
 
     .knowledge-icon {
       position: absolute;
 
-      width: 36px;
-      height: 36px;
+      width: 38px;
+      height: 38px;
 
       display: flex;
       align-items: center;
@@ -474,17 +460,14 @@
 
       border-radius: 12px;
 
-      background: rgba(255, 255, 255, 0.09);
+      background: #FFFFFF;
 
-      border: 1px solid rgba(255, 255, 255, 0.14);
+      border: none;
 
       box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.16);
+        0 6px 15px rgba(0, 0, 0, 0.1);
 
-      font-size: 17px;
-
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+      font-size: 18px;
 
       animation: iconFloat 3s ease-in-out infinite;
     }
@@ -527,39 +510,34 @@
       }
 
       50% {
-        transform: translateY(-5px);
+        transform: translateY(-6px);
       }
 
     }
 
 
     /* ========================================
-       BRAND
+       BRAND (Warna Zootopia/Oranye-Merah)
        ======================================== */
 
     .brand {
-
-      font-size: 1.55rem;
-
+      font-size: 1.6rem;
       font-weight: 800;
-
       letter-spacing: 0.5px;
-
-      color: #F4F5F6;
-
       margin-bottom: 5px;
+      
+      /* Efek Teks Gradien Oranye-Merah seperti gambar */
+      background: linear-gradient(to right, #FF6B35, #FF4D4D);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #FF4D4D; /* Fallback */
     }
 
     .brand-subtitle {
-
-      color: #B9C8CF;
-
-      font-size: 0.84rem;
-
-      font-weight: 500;
-
-      letter-spacing: 0.7px;
-
+      color: #757575; /* Abu-abu cerah */
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
       margin-bottom: 25px;
     }
 
@@ -569,20 +547,14 @@
        ======================================== */
 
     .loading-text {
-
-      font-size: 0.92rem;
-
-      font-weight: 600;
-
-      color: #D5DEE2;
-
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #FF6B35; /* Oranye cerah */
       letter-spacing: 0.2px;
     }
 
     .loading-text::after {
-
       content: '';
-
       animation: dots 2s infinite;
     }
 
@@ -610,42 +582,33 @@
 
 
     /* ========================================
-       PROGRESS BAR
+       PROGRESS BAR (Warna Cerah)
        ======================================== */
 
     .progress-container {
-
       width: 190px;
-
-      height: 4px;
-
+      height: 6px; /* Sedikit lebih tebal */
       margin-top: 15px;
-
       overflow: hidden;
-
       border-radius: 20px;
-
-      background: rgba(255, 255, 255, 0.10);
+      background: rgba(255, 87, 34, 0.1); /* Oranye sangat muda */
     }
 
     .progress-bar {
-
       width: 45%;
-
       height: 100%;
-
       border-radius: 20px;
-
+      
+      /* Gradasi cerah oranye ke ungu */
       background:
         linear-gradient(
           90deg,
-          #7C9EAA,
-          #B59A55,
-          #D1B66A
+          #FF6B35,
+          #FF4D4D,
+          #8B5CF6
         );
 
-      animation:
-        loadingProgress 1.6s ease-in-out infinite;
+      animation: loadingProgress 1.6s ease-in-out infinite;
     }
 
     @keyframes loadingProgress {
@@ -666,50 +629,39 @@
 
 
     /* ========================================
-       MOBILE
+       MOBILE RESPONSIVE
        ======================================== */
 
     @media (max-width: 480px) {
 
       .loading-content {
-
         width: 88%;
-
         padding: 32px 22px 28px;
-
         border-radius: 27px;
       }
 
       .knowledge-loader {
-
         transform: scale(0.92);
-
         margin-bottom: 18px;
       }
 
       .brand {
-
-        font-size: 1.35rem;
+        font-size: 1.4rem;
       }
 
       .brand-subtitle {
-
-        font-size: 0.75rem;
-
+        font-size: 0.78rem;
         margin-bottom: 22px;
       }
 
       .loading-text {
-
-        font-size: 0.85rem;
+        font-size: 0.88rem;
       }
 
       .floating-icon {
-
-        width: 36px;
-        height: 36px;
-
-        font-size: 17px;
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
       }
 
     }
@@ -806,7 +758,7 @@
         </div>
 
         <div class="brand-subtitle">
-          Buku Penghubung Murid 7G Spegatuh
+          Battle 7G
         </div>
 
 
